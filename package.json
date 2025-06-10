@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "start": "wrangler dev",
     "cf-typegen": "wrangler types",
-    "type-check": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@epic-web/invariant": "^1.0.0",
