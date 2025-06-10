@@ -1,25 +1,32 @@
 {
-	"name": "remote-mcp-server-authless",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"format": "biome format --write",
-		"lint:fix": "biome lint --fix",
-		"start": "wrangler dev",
-		"cf-typegen": "wrangler types",
-		"type-check": "tsc --noEmit"
-	},
-	"dependencies": {
-		"@modelcontextprotocol/sdk": "^1.12.1",
-		"agents": "^0.0.94",
-		"zod": "^3.25.51"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/node": "^24.0.0",
-		"typescript": "^5.8.3",
-		"wrangler": "^4.19.1"
-	}
+  "name": "slides-mcp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "inspect": "mcp-inspector",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "start": "wrangler dev",
+    "cf-typegen": "wrangler types",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@epic-web/invariant": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "agents": "^0.0.94",
+    "lz-string": "^1.5.0",
+    "zod": "^3.25.51"
+  },
+  "devDependencies": {
+    "@epic-web/config": "^1.21.0",
+    "@modelcontextprotocol/inspector": "^0.14.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.28.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.19.1"
+  },
+  "prettier": "@epic-web/config/prettier"
 }
