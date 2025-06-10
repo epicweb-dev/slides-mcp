@@ -160,6 +160,10 @@ export default {
 			}).fetch(request, env, ctx)
 		}
 
+		if (url.pathname === '/') {
+			return Response.redirect('https://github.com/epicweb-dev/slides-mcp', 307)
+		}
+
 		return new Response('Not found', { status: 404 })
 	},
 }
