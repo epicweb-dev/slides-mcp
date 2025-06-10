@@ -63,18 +63,16 @@ Create a new presentation with slides.com providing the deck definition (see the
 					),
 			},
 			async ({ deck }) => {
-				invariant(
-					localUrl,
-					`localUrl is not set. This is my problem and you can't do anything about it.`,
-				)
-
 				const parsedDeck = deckSchema.parse(deck)
 
 				const encodedDeck = compressToEncodedURIComponent(
 					JSON.stringify(parsedDeck),
 				)
 
-				const url = new URL('/create-presentation', localUrl)
+				const url = new URL(
+					'/create-presentation',
+					localUrl ?? 'https://slides-mcp.kentcdodds.workers.dev',
+				)
 				url.searchParams.set('deck', encodedDeck)
 				return {
 					content: [
