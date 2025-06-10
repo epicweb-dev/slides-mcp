@@ -1,14 +1,14 @@
-import { McpAgent } from 'agents/mcp'
+import { invariant } from '@epic-web/invariant'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
-import { z } from 'zod'
-import { spec } from './spec.md.js'
-import { deckSchema } from './zod-schema.js'
+import { McpAgent } from 'agents/mcp'
 import {
 	compressToEncodedURIComponent,
 	decompressFromEncodedURIComponent,
 } from 'lz-string'
-import { invariant } from '@epic-web/invariant'
+import { z } from 'zod'
 import { zodToJsonSchema } from 'zod-to-json-schema'
+import { spec } from './spec.md.js'
+import { deckSchema } from './zod-schema.js'
 
 // just used to generate the URL for the create-presentation page (so we don't have to hardcode it)
 let localUrl: URL | null = null
