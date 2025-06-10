@@ -1,4 +1,3 @@
-import { invariant } from '@epic-web/invariant'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { McpAgent } from 'agents/mcp'
 import {
@@ -80,6 +79,8 @@ Create a new presentation with slides.com providing the deck definition (see the
 							type: 'text',
 							text: `
 Upon opening the URL below, the user will be presented with a form that will allow them to create a new presentation with the deck definition you have provided. Submitting this form will open slides.com and if the user is happy, they can save the presentation to their account.
+
+Please present this URL to the user so they can click it to create the presentation.
 							`,
 						},
 						{
